@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Parsa | সুগন্ধ ও তিলাওয়াতের এক অনন্য সওগাত</title>
+    <meta name="description" content="পারসা স্মার্ট বুখুর - বাংলাদেশের প্রিমিয়াম ইলেকট্রিক বুখুর ও কোরআন স্পিকার। সাশ্রয়ী মূল্যে আভিজাত্য।">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-black: #050505;
+            --gold: #D4AF37;
+            --gold-gradient: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+            --glass: rgba(255, 255, 255, 0.03);
+        }
+        
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background-color: var(--primary-black);
+            color: #fff;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* Mandala Rotating Animation (Inspired by Craftera) */
+        .mandala-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150%;
+            height: 150%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='none' stroke='%23D4AF37' stroke-opacity='0.1' stroke-width='0.3' d='M50 50m-40 0a40 40 0 1 0 80 0a40 40 0 1 0 -80 0M50 10L50 90M10 50L90 50M21.7 21.7L78.3 78.3M21.7 78.3L78.3 21.7'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation: rotateMandala 150s linear infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes rotateMandala {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .gold-text {
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-premium {
+            background: var(--gold-gradient);
+            color: #000 !important;
+            font-weight: 800;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .btn-premium:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.4);
+            filter: brightness(1.2);
+        }
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            transition: all 0.4s ease;
+        }
+
+        .glass-card:hover {
+            border-color: var(--gold);
+            box-shadow: 0 20px 50px rgba(212, 175, 55, 0.1);
+        }
+
+        /* Success Modal Styles */
+        #successModal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.9);
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: #0A0A0A;
+            border: 2px solid var(--gold);
+            max-width: 500px;
+            width: 100%;
+            border-radius: 30px;
+            padding: 40px;
+            text-align: center;
+            transform: scale(0.9);
+            transition: 0.3s;
+        }
+
+        #successModal.active { display: flex; }
+        #successModal.active .modal-content { transform: scale(1); }
+
+        /* Custom Radio Buttons */
+        input[type="radio"]:checked + label {
+            border-color: var(--gold);
+            background: rgba(212, 175, 55, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Rotating Background -->
+    <div class="fixed inset-0 overflow-hidden -z-10">
+        <div class="mandala-bg"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/5 px-6 py-5 flex justify-between items-center">
+        <div class="text-3xl font-bold gold-text tracking-widest uppercase" style="font-family: 'Poppins';">PARSA</div>
+        <a href="#order" class="btn-premium px-8 py-2 rounded-full text-xs uppercase">Order Now</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-48 pb-24 px-6 text-center">
+        <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight">সুন্নাহ ও আভিজাত্যের <br><span class="gold-text">বরকতময় সওগাত</span></h1>
+        <p class="text-gray-400 max-w-2xl mx-auto text-lg mb-12">স্মার্ট বুখুর ডিভাইস উইথ বিল্ট-ইন কোরআন স্পিকার। পারসা নিয়ে এলো আপনার ইবাদতের ঘরে এক নতুন প্রশান্তি।</p>
+        
+        <!-- Video Placeholder -->
+        <div class="max-w-4xl mx-auto rounded-3xl overflow-hidden border border-gray-800 shadow-2xl glass-card">
+            <div class="aspect-video bg-black/50 flex items-center justify-center">
+                <span class="text-gray-600">Cinematic Video Placeholder</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Order Section -->
+    <section id="order" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            
+            <!-- Left: Product Details -->
+            <div class="space-y-8">
+                <h2 class="text-4xl font-bold border-l-8 border-[#D4AF37] pl-6 uppercase">আপনার প্যাকেজ</h2>
+                <div class="glass-card p-10 rounded-[40px]">
+                    <h3 class="text-3xl gold-text mb-6">Smart Bukhoor Device</h3>
+                    <ul class="space-y-4 text-gray-300 mb-10">
+                        <li class="flex items-center gap-3">✨ বিল্ট-ইন কোরআন স্পিকার</li>
+                        <li class="flex items-center gap-3">✨ স্মার্টফোন অ্যাপ কন্ট্রোল</li>
+                        <li class="flex items-center gap-3">✨ ১টি প্রিমিয়াম ফ্রাগ্রেন্স অয়েল (বোনাস)</li>
+                        <li class="flex items-center gap-3">✨ ইউজার ম্যানুয়াল ও চার্জিং ক্যাবল</li>
+                    </ul>
+
+                    <div class="space-y-4 border-t border-white/10 pt-8">
+                        <div class="flex justify-between text-gray-500">
+                            <span>মূল দাম:</span>
+                            <span class="line-through">৳ ৫,৫০০</span>
+                        </div>
+                        <div class="flex justify-between text-2xl font-bold text-white">
+                            <span>অফার প্রাইস:</span>
+                            <span>৳ ৪,৫০০</span>
+                        </div>
+                        <div class="flex justify-between text-gray-400">
+                            <span>ডেলিভারি চার্জ:</span>
+                            <span id="delCharge">৳ ৭০</span>
+                        </div>
+                        <div class="flex justify-between text-4xl font-bold gold-text pt-4">
+                            <span>সর্বমোট:</span>
+                            <span id="totalPrice">৳ ৪,৫৭০</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Booking Form -->
+            <div class="glass-card p-10 md:p-14 rounded-[40px]">
+                <h3 class="text-2xl text-center gold-text mb-10 uppercase tracking-widest">অর্ডার সম্পন্ন করুন</h3>
+                <form id="orderForm">
+                    <div class="space-y-6">
+                        <input type="text" id="name" placeholder="আপনার নাম" required 
+                               class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl focus:border-[#D4AF37] outline-none transition">
+                        
+                        <input type="tel" id="phone" placeholder="ফোন নম্বর" required 
+                               class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl focus:border-[#D4AF37] outline-none transition">
+                        
+                        <textarea id="address" placeholder="বিস্তারিত ঠিকানা (থানা ও জেলাসহ)" required 
+                                  class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl h-32 focus:border-[#D4AF37] outline-none transition"></textarea>
+                        
+                        <!-- Delivery Zones -->
+                        <div class="grid grid-cols-2 gap-4 py-2">
+                            <div class="relative">
+                                <input type="radio" id="dhaka" name="zone" value="Dhaka" checked class="hidden" onclick="calc(70)">
+                                <label for="dhaka" class="block text-center p-4 rounded-2xl border border-white/10 cursor-pointer transition font-bold text-sm">
+                                    ঢাকার ভেতরে<br><span class="text-[10px] font-normal opacity-50">চার্জ: ৳৭০</span>
+                                </label>
+                            </div>
+                            <div class="relative">
+                                <input type="radio" id="outside" name="zone" value="Outside" class="hidden" onclick="calc(130)">
+                                <label for="outside" class="block text-center p-4 rounded-2xl border border-white/10 cursor-pointer transition font-bold text-sm">
+                                    ঢাকার বাইরে<br><span class="text-[10px] font-normal opacity-50">চার্জ: ৳১৩০</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" id="submitBtn" class="btn-premium w-full py-6 rounded-2xl text-xl uppercase tracking-widest mt-4">
+                            অর্ডার কনফার্ম করুন
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="successModal">
+        <div class="modal-content">
+            <div class="text-7xl mb-6">🕋</div>
+            <h2 class="text-3xl gold-text mb-4">আলহামদুলিল্লাহ!</h2>
+            <p class="text-gray-400 leading-relaxed mb-10">আপনার অর্ডারটি সফলভাবে গ্রহণ করা হয়েছে। পারসা-এর পক্ষ থেকে আমাদের প্রতিনিধি শীঘ্রই আপনার সাথে যোগাযোগ করবেন।</p>
+            <button onclick="closeModal()" class="btn-premium px-12 py-3 rounded-full uppercase text-sm">বন্ধ করুন</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-20 border-t border-white/5 text-center">
+        <div class="text-4xl gold-text font-bold mb-4 tracking-widest uppercase">PARSA</div>
+        <p class="text-gray-600 mb-8">Affordable Luxury with Spiritual Serenity</p>
+        <p class="text-gray-700 text-xs">গোরান শান্তিপুর, খিলগাঁও, ঢাকা | ০১৩২৮-৩৬৫৯০৮</p>
+    </footer>
+
+    <!-- Form Logic -->
+    <script>
+        let totalVal = 4570;
+        function calc(charge) {
+            totalVal = 4500 + charge;
+            document.getElementById('delCharge').innerText = '৳ ' + charge;
+            document.getElementById('totalPrice').innerText = '৳ ' + totalVal;
+        }
+
+        const form = document.getElementById('orderForm');
+        form.onsubmit = async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            btn.innerText = "প্রসেসিং হচ্ছে...";
+            btn.disabled = true;
+
+            const scriptURL = 'YOUR_GOOGLE_SCRIPT_URL'; // এখানে আপনার গুগল অ্যাপস স্ক্রিপ্ট লিঙ্কটি দিন
+            const formData = new FormData();
+            formData.append('name', document.getElementById('name').value);
+            formData.append('phone', document.getElementById('phone').value);
+            formData.append('address', document.getElementById('address').value);
+            formData.append('total', totalVal + " BDT");
+
+            try {
+                await fetch(scriptURL, { method: 'POST', body: formData });
+                document.getElementById('successModal').classList.add('active');
+                form.reset();
+            } catch (error) {
+                alert("দুঃখিত, পুনরায় চেষ্টা করুন।");
+            } finally {
+                btn.innerText = "অর্ডার কনফার্ম করুন";
+                btn.disabled = false;
+            }
+        };
+
+        function closeModal() {
+            document.getElementById('successModal').classList.remove('active');
+        }
+    </script>
+</body>
+</html>
